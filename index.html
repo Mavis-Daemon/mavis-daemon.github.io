@@ -1,13 +1,102 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
     <title>Home page - Mavis Daemon</title>
-</head>
-<body>
-    <h1>Hi, Welcome to my site</h1>
-    <p>website is still in construction!</p>
-    <a href="https://mavis-daemon.github.io/hydrocivik">Hydrocivik's site</a>
-</body>
+  </head>
+  <body>
+    <header>
+      <section class="top_bar">
+        <button type="button" onclick="openAboutMe()">
+          <h5>MavisDaemon</h5>
+        </button>
+        <!-- <div>
+          <img src="icons/Arrow 1.svg" alt="arrow up" />
+          <p class="cap">About me</p>
+        </div> -->
+      </section>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Hi, Welcome to my website</h1>
+      </section>
+      <!-- <section class="project_list">
+        <search>
+          <div class="Seach_bar">
+            <div class="search_input">
+              <img src="/icons/Search icon.svg" alt="search icon" />
+              <input type="search" placeholder="Search..." />
+            </div>
+            <button type="button" id="filter_button" onclick="openFilterList()">
+              <img src="/icons/Filter list icon.svg" alt="filter icon" />
+              <p>All</p>
+              <img
+                src="/icons/Arrow drop down icon.svg"
+                alt="arrow drop down icon"
+              />
+            </button>
+          </div>
+          <ul class="Project_list">
+            <li>
+              <a href="https://mavis-daemon.github.io/hydrocivik">Hydrocivik</a>
+            </li>
+          </ul>
+        </search>
+      </section> -->
+    </main>
+
+    <footer>
+      <div class="upper_footer">
+        <section>
+          <nav>
+            <h4>navigation</h4>
+            <ul>
+              <li>
+                <p>back to top</p>
+              </li>
+              <li>
+                <p>About me</p>
+              </li>
+            </ul>
+          </nav>
+        </section>
+        <div class="divider"></div>
+        <section class="time_loc">
+          <time datetime="">
+            <p class="time">11:30</p>
+            <p class="utc">(utc +1)</p>
+          </time>
+          <p>Warsaw, Poland</p>
+        </section>
+        <div class="divider"></div>
+        <section>
+          <h4>Contact me</h4>
+          <ul>
+            <li>
+              <img src="" alt="" />
+              <img src="" alt="" />
+              <img src="" alt="" />
+              <img src="" alt="" />
+              <img src="" alt="" />
+              <img src="" alt="" />
+            </li>
+          </ul>
+        </section>
+      </div>
+      <div class="lower_footer">
+        <h4>Mavis Daemon</h4>
+        <p class="cap">License</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>

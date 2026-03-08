@@ -1,0 +1,115 @@
+/* color guide */
+:root {
+    --color-drop-shadow: rgba(0, 0, 0, 0.25);
+    --color-overlay-shadow: rgba(0, 0, 0, 0.8);
+    --color-text-main: rgba(255,255,255,1);
+    --color-text-sub: rgba(202,202,202,1);
+    --color-white: rgba(255,255,255,1);
+    --color-gray: rgba(202,202,202,1);
+    --color-dark: rgba(0, 36, 39, 1);
+    --color-main: rgba(0, 73, 80, 1);
+    --color-bright: rgba(45, 121, 128, 1);
+    --color-other-dark: rgba(178, 80, 60, 1);
+    --color-other-bright: rgba(204, 102, 82, 1);
+}
+/* font style guide */
+:root {
+    --font-weight-bold: 700;
+    --font-weight-semibold: 600;
+    --font-weight-medium: 500;
+    --font-weight-regular: 400;
+    --font-weight-light: 300;
+    --font-weight-extralight: 200;
+    --font-weight-thin: 100;
+    --font-size-h-desktop: 6rem;
+    --font-size-h-phone: 3rem;
+    --font-size-title-l: 2.5rem;
+    --font-size-title-m: 2rem;
+    --font-size-title-s: 1.5rem;
+    --font-size-subheading: 1.5rem;
+    --font-size-body-l: 1.5rem;
+    --font-size-body-s: 1rem;
+    --font-size-button-l: 1.5rem;
+    --font-size-button-m: 1rem;
+    --font-size-button-s: 0.875rem;
+    --font-size-cap-l: 1.5rem;
+    --font-size-cap-s: 1rem;
+}
+html {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: var(--font-weight-regular);
+    font-style: normal;
+    font-size: 16px;
+}
+
+.bold, b, strong {
+    font-weight: var(--font-weight-bold);
+}
+h1 {
+    font-size: var(--font-size-h-desktop);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-main);
+}
+h1.phone, h2 {
+    font-size: var(--font-size-h-phone);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-main);
+}
+h3 {
+    font-size: var(--font-size-title-l);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-main);
+}
+h4 {
+    font-size: var(--font-size-title-m);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-main);
+}
+h4.phone, h5, h6 {
+    font-size: var(--font-size-title-s);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-main);
+}
+.subheading {
+    font-size: var(--font-size-subheading);
+    color: var(--color-text-sub);
+}
+p {
+    font-size: var(--font-size-body-l);
+    color: var(--color-text-main);
+}
+p.small, p.phone {
+    font-size: var(--font-size-body-s);
+    color: var(--color-text-main);
+}
+button.large {
+    font-size: var(--font-size-button-l);
+    color: var(--color-text-main);
+    text-box: trim-end cap alphabetic;
+}
+button, .tag, input {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: var(--font-weight-regular);
+    font-style: normal;
+    font-size: var(--font-size-button-m);
+    color: var(--color-text-main);
+}
+.tag.phone {
+    font-size: var(--font-size-button-s);
+    color: var(--color-text-main);
+    text-box: trim-end cap alphabetic;
+}
+.cap {
+    font-size: var(--font-size-cap-l);
+    color: var(--color-text-main);
+}
+.cap.small, .cap.phone {
+    font-size: var(--font-size-cap-s);
+    color: var(--color-text-main);
+}
+/* general */
+body {
+    background-color: var(--color-dark);
+}

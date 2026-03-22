@@ -47,30 +47,32 @@ b,
 strong {
   font-weight: var(--font-weight-bold);
 }
-h1 {
+h1,
+.hero {
   font-size: var(--font-size-h-desktop);
   font-weight: var(--font-weight-semibold);
   color: var(--color-text-main);
 }
-h1.phone,
-h2 {
+.h2 {
   font-size: var(--font-size-h-phone);
   font-weight: var(--font-weight-semibold);
   color: var(--color-text-main);
 }
-h3 {
+h3,
+.title.l {
   font-size: var(--font-size-title-l);
   font-weight: var(--font-weight-bold);
   color: var(--color-text-main);
 }
-h4 {
+h4,
+.title {
   font-size: var(--font-size-title-m);
   font-weight: var(--font-weight-semibold);
   color: var(--color-text-main);
 }
-h4.phone,
 h5,
-h6 {
+h6,
+.title.s {
   font-size: var(--font-size-title-s);
   font-weight: var(--font-weight-medium);
   color: var(--color-text-main);
@@ -80,23 +82,25 @@ h6 {
   color: var(--color-text-sub);
 }
 p,
+.body,
 li {
   font-size: var(--font-size-body-l);
   color: var(--color-text-main);
 }
-p.small,
-p.phone {
+.body.s {
   font-size: var(--font-size-body-s);
   color: var(--color-text-main);
 }
-button.large {
+button.l,
+.button.l {
   font-size: var(--font-size-button-l);
   color: var(--color-text-main);
   text-box: trim-end cap alphabetic;
 }
 button,
+.button,
 .tag,
-.tag_button,
+button.tag,
 input,
 input::placeholder {
   font-family: "Josefin Sans", sans-serif;
@@ -107,17 +111,11 @@ input::placeholder {
   color: var(--color-text-main);
   text-box: trim-end cap alphabetic;
 }
-.tag.phone {
-  font-size: var(--font-size-button-s);
-  color: var(--color-text-main);
-  text-box: trim-end cap alphabetic;
-}
 .cap {
   font-size: var(--font-size-cap-l);
   color: var(--color-text-main);
 }
-.cap.small,
-.cap.phone {
+.cap.s {
   font-size: var(--font-size-cap-s);
   color: var(--color-text-main);
 }
@@ -131,7 +129,30 @@ p {
   padding: 0;
   margin: 0;
 }
-
+@media (max-width: 1000px) {
+  h1,
+  .hero {
+    font-size: var(--font-size-h-phone);
+  }
+  h4,
+  .title {
+    font-size: var(--font-size-title-s);
+    font-weight: var(--font-weight-medium);
+  }
+  p,
+  .body {
+    font-size: var(--font-size-body-s);
+  }
+  .tag {
+    font-size: var(--font-size-button-s);
+    color: var(--color-text-main);
+    text-box: trim-end cap alphabetic;
+  }
+  .cap {
+    font-size: var(--font-size-cap-s);
+    color: var(--color-text-main);
+  }
+}
 /* general */
 :root {
   --border-radius: 1.5rem;
@@ -163,6 +184,7 @@ header button {
 /* main */
 main {
   background-color: var(--color-dark);
+  background-size: cover;
   display: flex;
   min-height: calc(100dvh - 58px);
   padding-bottom: 3rem;
@@ -268,12 +290,16 @@ ul.project_list > li {
   position: relative;
   perspective: 1000px;
 }
-ul.project_list > li[data-select="true"] > div.card {
+ul.project_list > li:hover > div.card {
+  transform: translateZ(200px) rotateY(180deg);
+  transition: 0.3s ease-in-out;
+}
+/* ul.project_list > li[data-select="true"] > div.card {
   animation: flip linear forwards;
   animation-duration: 0.7s;
-}
+} */
 
-@keyframes flip {
+/* @keyframes flip {
   0% {
     transform: translateZ(50px) rotateY(0deg);
     animation-timing-function: ease-in-out;
@@ -309,8 +335,8 @@ ul.project_list > li[data-select="true"] > div.card {
       box-shadow: 0 14px 7px 0 var(--color-drop-shadow);
     }
   }
-}
-ul.project_list > li[data-select="false"] > div.card {
+} */
+/* ul.project_list > li[data-select="false"] > div.card {
   animation: flip-back linear;
   animation-duration: 0.7s;
 }
@@ -335,17 +361,17 @@ ul.project_list > li[data-select="false"] > div.card {
     transform: translateZ(0px) rotateY(0deg);
     animation-timing-function: ease-in-out;
   }
-}
+} */
 div.card {
   position: absolute;
   width: 100%;
   height: 100%;
-  transition: 0.5s;
+  transition: 0.3s;
   transform-style: preserve-3d;
 }
-div.card:hover {
+/* div.card:hover {
   transform: translateZ(50px);
-}
+} */
 .front,
 .back {
   display: inline-flex;
@@ -362,7 +388,7 @@ div.card:hover {
   width: 25rem;
   height: 14.0625rem;
   aspect-ratio: 16/9;
-  box-shadow: 0 4px 7px 0 var(--color-drop-shadow);
+  box-shadow: 0 14px 7px 0 var(--color-drop-shadow);
   transition: 0.7s;
 }
 div.card:hover .card_image {
@@ -424,7 +450,7 @@ li.tag {
   justify-content: center;
   align-items: center;
 }
-button.tag_button {
+button.tag {
   background-color: var(--color-main);
   border: none;
 }
@@ -533,16 +559,6 @@ footer {
 @media (max-width: 1000px) {
   .footer_placeholder {
     height: 470px;
-  }
-  footer h4 {
-    font-size: var(--font-size-title-s);
-    font-weight: var(--font-weight-medium);
-  }
-  footer p {
-    font-size: var(--font-size-body-s);
-  }
-  footer .cap {
-    font-size: var(--font-size-cap-s);
   }
   footer {
     gap: 4rem;

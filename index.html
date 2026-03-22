@@ -11,12 +11,17 @@
       rel="stylesheet"
     />
     <title>Home page - Hyrax-x</title>
+    <meta name="description" content="Here is all my projects and works" />
   </head>
   <body>
     <header>
-      <button type="button" onclick="openAboutMe()">
-        <h5>Hyrax-x</h5>
-      </button>
+      <nav>
+        <!-- TODO Create Navigation to about me page and other pages-->
+        <button type="button" onclick="openAboutMe()" class="title s">
+          Hyrax-x
+        </button>
+      </nav>
+      <!-- TODO make this instruction follow Mavis Daemon button-->
       <!-- <div id="instruction">
           <img src="icons/Arrow 1.svg" alt="arrow up" />
           <p class="cap">About me</p>
@@ -34,7 +39,12 @@
             <img src="/icons/Search icon.svg" alt="search icon" />
             <input type="search" placeholder="Search..." />
           </div>
-          <button type="button" id="filter_button" onclick="openFilterList()">
+          <button
+            type="button"
+            id="filter_button"
+            class="button"
+            onclick="openFilterList()"
+          >
             <img src="/icons/Filter list icon.svg" alt="filter icon" />
             All
             <img
@@ -44,7 +54,7 @@
           </button>
         </div>
         <ul data-projects class="project_list">
-          <li data-project id="Hydrocivik">
+          <li data-project id="Hydrocivik" data-select="false">
             <div class="card">
               <div class="front">
                 <img
@@ -59,8 +69,8 @@
               <div class="back">
                 <div>
                   <section>
-                    <h5>Hydrocivik</h5>
-                    <p class="small">
+                    <h2 class="title s">Hydrocivik</h2>
+                    <p class="body s">
                       This is a website to showcase my music.
                     </p>
                   </section>
@@ -71,10 +81,14 @@
                       <!-- <li class="tag">Music</li>
                     <li class="tag">Portfolio</li> -->
                       <li>
-                        <button class="tag_button" type="button">+2</button>
+                        <button class="tag" type="button">+2</button>
                       </li>
                     </ul>
-                    <a href="https://hyrax-x.github.io/hydrocivik">
+                    <a
+                      href="https://hyrax-x.github.io/hydrocivik/"
+                      target="_blank"
+                      aria-label="Link to Hydrocivik web page"
+                    >
                       <img
                         src="icons/arrow forward icon.svg"
                         alt="arrow icon"
@@ -92,43 +106,54 @@
     <footer>
       <div class="upper_footer">
         <section>
-          <h4>Navigation</h4>
-          <nav>
-            <ul>
-              <li>
-                <a href="#">
-                  <p>Back to top</p>
-                </a>
-              </li>
-              <li>
-                <p>About me</p>
-              </li>
-            </ul>
-          </nav>
+          <h2 class="title s">Navigation</h2>
+          <ul>
+            <li>
+              <a
+                href="#"
+                aria-label="Scroll back to top of the page"
+                class="body s"
+              >
+                Back to top
+              </a>
+            </li>
+            <li>
+              <!-- TODO Link to the about me page-->
+              <p class="body s">About me</p>
+            </li>
+          </ul>
         </section>
         <div class="divider"></div>
         <section class="time_loc">
-          <h4>Time & Location</h4>
+          <h2 class="title s">Time & Location</h2>
           <div>
-            <time datetime="">
-              <p class="time">11:30</p>
-              <p class="utc">(UTC +1)</p>
+            <time datetime="" class="body s">
+              <span class="time">11:30</span>
+              <span class="utc">(UTC +1)</span>
             </time>
-            <p>Warsaw, Poland</p>
+            <p class="body s">Warsaw, Poland</p>
           </div>
         </section>
         <div class="divider"></div>
         <section>
-          <h4>Contact me</h4>
-          <p class="small">tong.quocviet1234@gmail.com</p>
+          <h2 class="title s">Contact me</h2>
+          <p class="body s">tong.quocviet1234@gmail.com</p>
           <ul>
             <li>
-              <a href="https://www.youtube.com/@Hydrocivik" target="_blank"
-                ><img src="/icons/youtube icon.svg" alt="Youtube icon" />
+              <a
+                href="https://www.youtube.com/@Hydrocivik"
+                target="_blank"
+                aria-label="Link to my youtube channel"
+              >
+                <img src="/icons/youtube icon.svg" alt="Youtube icon" />
               </a>
             </li>
             <li>
-              <a href="https://www.instagram.com/hyrax.zip" target="_blank">
+              <a
+                href="https://www.instagram.com/hyrax.zip"
+                target="_blank"
+                aria-label="Link to my instagram"
+              >
                 <img src="/icons/instagram icon.svg" alt="Instagram icon" />
               </a>
             </li>
@@ -136,6 +161,7 @@
               <a
                 href="https://www.facebook.com/viet.tongquoc.9843/"
                 target="_blank"
+                aria-label="Link to my facebook account"
               >
                 <img src="/icons/facebook icon.svg" alt="Facebook icon" />
               </a>
@@ -144,21 +170,26 @@
               <a
                 href="https://bsky.app/profile/hyrax-x.bsky.social"
                 target="_blank"
+                aria-label="Link to my Bluesky account"
               >
                 <img src="/icons/bluesky icon.svg" alt="Bluesky icon" />
               </a>
             </li>
             <li>
-              <a href="https://github.com/hyrax-x" target="_blank"
-                ><img src="/icons/github icon.svg" alt="Github icon"
+              <a
+                href="https://github.com/hyrax-x"
+                target="_blank"
+                aria-label="Link to my Github account"
+              >
+                <img src="/icons/github icon.svg" alt="Github icon"
               /></a>
             </li>
           </ul>
         </section>
       </div>
       <div class="lower_footer">
-        <h4>Hyrax-x</h4>
-        <p class="cap">License</p>
+        <p class="title">Hyrax-x</p>
+        <p class="cap s">License</p>
       </div>
     </footer>
     <script src="script.js"></script>

@@ -27,22 +27,22 @@ const documentObserver = new ResizeObserver(() => {
 documentObserver.observe(document.documentElement);
 
 // project select
-document.addEventListener("click", (e) => {
-  const clickedProj = e.target.closest("[data-project]");
-  const projects = document.querySelectorAll("[data-project]");
-  //unselect everything if clicked outside
-  if (!clickedProj) {
-    projects.forEach((project) => {
-      project.dataset.select = "false";
-      return;
-    });
-  }
-  //select the clicked proj and unselect other
-  projects.forEach((project) => {
-    if (project === clickedProj) {
-      project.dataset.select = "true";
-    } else {
-      project.dataset.select = "false";
-    }
-  });
-});
+// document.addEventListener("click", (e) => {
+//   const clickedProj = e.target.closest("[data-project]");
+//   const projects = document.querySelectorAll("[data-project]");
+//   //unselect everything if clicked outside
+//   if (!clickedProj) {
+//     projects.forEach((project) => {
+//       project.dataset.select = "false";
+//       return;
+//     });
+//   }
+//   //select the clicked proj and unselect other
+//   projects.forEach((project) => {
+//     if (project === clickedProj) {
+//       project.dataset.select = "true";
+//     } else {
+//       project.dataset.select = "false";
+//     }
+//   });
+// });

@@ -14,31 +14,51 @@
     <meta name="description" content="Here is all my projects and works" />
   </head>
   <body>
-    <header id="nav-bar">
-      <div class="nav-top">
+    <header>
+      <nav id="nav-bar">
         <!-- link about page -->
-        <nav>
-          <a href="/about.html" class="logo-button link-style-none fs-h6">
-            [Hyrax-x]
-          </a>
-        </nav>
+        <a href="/about.html" class="logo-button link-style-none fs-h6">
+          [Hyrax-x]
+        </a>
+        <!-- filter -->
+        <div class="flex-1">
+          <div class="filter-wrap">
+            <div class="filter-list">
+              <a href="/" class="f-button nav-button link-style-none active">
+                All
+              </a>
+              <a href="/" class="f-button nav-button link-style-none"> Arts </a>
+              <a href="/" class="f-button nav-button link-style-none">
+                Images
+              </a>
+              <a href="/" class="f-button nav-button link-style-none">
+                Designs
+              </a>
+              <a href="/" class="f-button nav-button link-style-none">
+                UI/UX
+              </a>
+              <a href="/" class="f-button nav-button link-style-none">
+                Musics
+              </a>
+              <a href="/" class="f-button nav-button link-style-none">
+                Videos & Animations
+              </a>
+            </div>
+          </div>
+        </div>
         <!-- device checkbox -->
-        <form>
+        <form class="device-checkbox">
           <input
             type="checkbox"
             name="device-check"
-            id="device-button-1"
-            class="display-none device-button-1"
+            id="device-button"
+            class="display-none"
           />
-          <label
-            for="device-button-1"
-            class="device-button f-tag device-button-1"
-          >
+          <label for="device-button" class="device-button f-tag">
             <div id="device-button-pc" class="device-button-indicator active">
               <div id="pc-icon" class="icon"></div>
               <span class="pop-up">PC mode</span>
             </div>
-
             <div id="device-button-phone" class="device-button-indicator">
               <div id="phone-icon" class="icon"></div>
               <span class="pop-up">Phone mode</span>
@@ -46,118 +66,42 @@
             <span>Computer and phone toggle</span>
           </label>
         </form>
-      </div>
-      <form class="filter-button">
-        <input
-          type="radio"
-          name="filter"
-          id="filter-all"
-          checked
-          class="display-none"
-        />
-        <label for="filter-all" class="f-button nav-button">All</label>
-
-        <input
-          type="radio"
-          name="filter"
-          id="filter-art"
-          class="display-none"
-        />
-        <label for="filter-art" class="f-button nav-button">Arts</label>
-
-        <input
-          type="radio"
-          name="filter"
-          id="filter-image"
-          class="display-none"
-        />
-        <label for="filter-image" class="f-button nav-button">Images</label>
-
-        <input
-          type="radio"
-          name="filter"
-          id="filter-design"
-          class="display-none"
-        />
-        <label for="filter-design" class="f-button nav-button">Designs</label>
-
-        <input
-          type="radio"
-          name="filter"
-          id="filter-ui/ux"
-          class="display-none"
-        />
-        <label for="filter-ui/ux" class="f-button nav-button">UI/UX</label>
-
-        <input
-          type="radio"
-          name="filter"
-          id="filter-music"
-          class="display-none"
-        />
-        <label for="filter-music" class="f-button nav-button">Musics</label>
-
-        <input
-          type="radio"
-          name="filter"
-          id="filter-motion"
-          class="display-none"
-        />
-        <label for="filter-motion" class="f-button nav-button">
-          Videos & Animations
-        </label>
-      </form>
-      <!-- device checkbox -->
-      <form>
-        <input
-          type="checkbox"
-          name="device-check"
-          id="device-button-2"
-          class="display-none device-button-2"
-        />
-        <label
-          for="device-button-2"
-          class="device-button f-tag device-button-2"
-        >
-          <div id="device-button-pc" class="device-button-indicator active">
-            <div id="pc-icon" class="icon"></div>
-            <span class="pop-up">PC mode</span>
-          </div>
-
-          <div id="device-button-phone" class="device-button-indicator">
-            <div id="phone-icon" class="icon"></div>
-            <span class="pop-up">Phone mode</span>
-          </div>
-          <span>Computer and phone toggle</span>
-        </label>
-      </form>
+      </nav>
     </header>
 
     <main class="layout-page-grid">
-      <section id="section-hero">
-        <div>
-          <h1 class="f-hero">
-            Hi,
-            <abbr title="Hello kaomoji" class="abbr-style-none">(´• ω •)ﾉ</abbr>
-          </h1>
-        </div>
-        <div>
-          <p class="f-body">
-            You can find all my information and contact details in the
-            <a href="/about.html" class="fw-b fc-highlight-1 link-style-none">
-              [Hyrax-x]
-            </a>
-            tab.
-          </p>
-          <p class="f-body">Below is the list of my works.</p>
-          <p class="f-body">
-            Enjoy!
-            <abbr class="fc-secondary-1 abbr-style-none" title="Happy kaomoji">
-              >ᴗ< !!
-            </abbr>
-          </p>
-        </div>
-      </section>
+      <div>
+        <section id="section-hero">
+          <div>
+            <h1 class="f-hero">
+              Hi,
+              <abbr title="Hello kaomoji" class="abbr-style-none"
+                >(´• ω •)ﾉ</abbr
+              >
+            </h1>
+          </div>
+          <div>
+            <p class="f-body">
+              You can find all my information and contact details in the
+              <a href="/about.html" class="fw-b fc-highlight-1 link-style-none">
+                [Hyrax-x]
+              </a>
+              tab.
+            </p>
+            <p class="f-body">Below is the list of my works.</p>
+            <p class="f-body">
+              Enjoy!
+              <abbr
+                class="fc-secondary-1 abbr-style-none"
+                title="Happy kaomoji"
+              >
+                >ᴗ< !!
+              </abbr>
+            </p>
+          </div>
+        </section>
+        <section>project list</section>
+      </div>
     </main>
 
     <script src="script.js"></script>

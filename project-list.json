@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Puppets",
+    "description": "",
+    "imagePath": "public/images/Puppet.JPG",
+    "year": 2020,
+    "tags": ["Images"]
+  },
+  {
+    "title": "Candles",
+    "description": "",
+    "imagePath": "public/images/Candle.jpg",
+    "year": 2023,
+    "tags": ["Images"]
+  },
+  {
+    "title": "Couples",
+    "description": "",
+    "imagePath": "public/images/Couples.JPG",
+    "year": 2020,
+    "tags": ["Images", "Daily life"]
+  },
+  {
+    "title": "The street",
+    "description": "",
+    "imagePath": "public/images/landscape 2.JPG",
+    "year": 2023,
+    "tags": ["Images", "Landscapes"]
+  },
+  {
+    "title": "Flowers",
+    "description": "",
+    "imagePath": "public/images/Flower.JPG",
+    "year": 2020,
+    "tags": ["Images"]
+  },
+  {
+    "title": "ARtistic Threads",
+    "description": "This is an e-commerce for brand and Individual seller to sell clothes.",
+    "imagePath": "public/images/project-thread/artistic-thread-mockup-1.png",
+    "year": 2024,
+    "tags": ["Projects", "UI/UX", "Figma Mockup"]
+  },
+  {
+    "title": "Hydrocivik Website",
+    "description": "This is a landing page about my own music producer brand.",
+    "imagePath": "public/images/project-hydrocivik-site/hydrocivik-site-mockup-1.png",
+    "year": 2025,
+    "tags": ["Projects", "UI/UX", "Wordpress Elementor"]
+  },
+  {
+    "title": "LinkUP",
+    "description": "An app about learning language by connecting with people",
+    "imagePath": "public/images/project-linkup/login page mockup.png",
+    "year": 2025,
+    "tags": ["Projects", "UI/UX", "Figma Mockup"]
+  },
+  {
+    "title": "Khe Uoc Storyboard",
+    "description": "",
+    "imagePath": "public/images/project-kheuoc-storyboard/khe-uoc-storyboard.jpg",
+    "year": 2025,
+    "tags": ["Projects", "animation", "storyboard"]
+  },
+  {
+    "title": "Chibi Play Guitar",
+    "description": "",
+    "imagePath": "public/images/Chibi-play-guitar.jpg",
+    "year": 2025,
+    "tags": ["Images", "Arts"]
+  }
+]

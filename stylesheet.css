@@ -101,6 +101,10 @@ html {
     --f-button: var(--fs-h6);
   }
 }
+/** --animation-- */
+:root {
+  --transition-delay-1: 300ms;
+}
 
 /** ---PUBLIC--- */
 * {
@@ -293,7 +297,7 @@ html {
   background-color: var(--color-main-2-5a);
   color: var(--color-main-2);
 
-  transition: 300ms;
+  transition: var(--transition-delay-1);
 }
 .logo-button:hover {
   background-color: var(--color-main-2-50a);
@@ -324,7 +328,7 @@ html {
 
   color: var(--color-main-2);
 
-  transition: 300ms;
+  transition: var(--transition-delay-1);
 }
 .nav-button:hover {
   background-color: var(--color-main-2-5a);
@@ -374,7 +378,7 @@ html {
 
   background-color: var(--color-main-2-5a);
 
-  transition: 300ms;
+  transition: var(--transition-delay-1);
 }
 #device-button-pc {
   background-color: var(--color-highlight-1-70a);
@@ -544,20 +548,41 @@ input[type="checkbox"][id="device-button"]:checked
 /** --Body-- */
 body {
   background-color: var(--color-main-4);
-  /* outline: var(--border-main-2);
-  outline-offset: -2px; */
 
+  position: relative;
   width: 100vw;
   min-height: 100vh;
   padding-top: 1rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 
   display: flex;
   flex-direction: column;
 }
+body::after {
+  content: "";
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 1rem;
+  width: calc(100% - 0.75rem * 2);
+  height: 2px;
+  background-color: var(--color-main-2);
+}
 @media (width > 800px) {
   body {
     max-height: 100vh;
+  }
+  body::after {
+    width: calc(100% - 1rem * 2);
+  }
+}
+@media (width > 1275px) {
+  body {
+    padding-bottom: 2rem;
+  }
+  body::after {
+    bottom: 2rem;
+    width: calc(100% - 1.5rem * 2);
   }
 }
 /** --Nav bar-- */
@@ -631,6 +656,7 @@ main {
     overflow: auto;
   }
 }
+
 /** --Page grid-- */
 .layout-page-grid {
   display: grid;
@@ -679,7 +705,7 @@ main {
 #section-hero h1 {
   text-wrap: balance;
 }
+
 #section-project-list {
-  display: flex;
-  gap: 2rem;
+  display: grid;
 }

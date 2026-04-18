@@ -392,7 +392,6 @@ input[type="checkbox"][id="device-button"]:checked
   background-color: var(--color-main-2-5a);
   box-shadow: none;
 }
-
 .device-button-indicator .pop-up {
   color: var(--color-main-2);
   white-space: nowrap;
@@ -408,7 +407,6 @@ input[type="checkbox"][id="device-button"]:checked
 .device-button-indicator:hover .pop-up {
   display: inline;
 }
-
 .device-button-indicator .icon {
   width: calc(1.25rem - 4px);
   height: calc(0.75rem - 4px);
@@ -464,72 +462,6 @@ input[type="checkbox"][id="device-button"]:checked
   background-color: var(--color-other-10a);
   color: var(--color-other-40a);
 }
-/** --Play button-- */
-.play-button {
-  aspect-ratio: 1 / 1;
-  width: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background-color: var(--color-main-2-5a);
-}
-input[type="checkbox"][id="play-btn"]:not(:hover, :disabled, :checked)
-  + label
-  #play-hover-icon,
-input[type="checkbox"][id="play-btn"]:not(:hover, :disabled, :checked)
-  + label
-  #play-disabled-icon,
-input[type="checkbox"][id="play-btn"]:not(:hover, :disabled, :checked)
-  + label
-  #pause-icon,
-input[type="checkbox"][id="play-btn"]:hover:not(:checked, :disabled)
-  + label
-  #play-icon,
-input[type="checkbox"][id="play-btn"]:hover:not(:checked, :disabled)
-  + label
-  #play-disabled-icon,
-input[type="checkbox"][id="play-btn"]:hover:not(:checked, :disabled)
-  + label
-  #pause-icon,
-input[type="checkbox"][id="play-btn"]:disabled + label #play-icon,
-input[type="checkbox"][id="play-btn"]:disabled + label #play-hover-icon,
-input[type="checkbox"][id="play-btn"]:disabled + label #pause-icon,
-.play-button.disabled #play-icon,
-.play-button.disabled #play-hover-icon,
-.play-button.disabled #pause-icon,
-input[type="checkbox"][id="play-btn"]:checked + label #play-icon,
-input[type="checkbox"][id="play-btn"]:checked + label #play-hover-icon,
-input[type="checkbox"][id="play-btn"]:checked + label #play-disabled-icon,
-.play-button.active #play-icon,
-.play-button.active #play-hover-icon,
-.play-button.active #play-disabled-icon {
-  display: none;
-}
-input[type="checkbox"][id="play-btn"]:hover + label {
-  background-color: var(--color-main-2-50a);
-  box-shadow: var(--glow-main);
-}
-input[type="checkbox"][id="play-btn"]:disabled + label,
-.play-button.disabled {
-  background-color: var(--color-other-10a);
-}
-input[type="checkbox"][id="play-btn"]:checked + label,
-.play-button.active {
-  background-color: var(--color-highlight-1-70a);
-  box-shadow: var(--glow-highlight);
-}
-/** --Audio progression-- */
-.audio-progress-input {
-  -webkit-appearance: none;
-
-  width: 100%;
-  height: 1rem;
-  background: var(--color-main-2-50a);
-}
-.audio-progress-input::-webkit-slider-thumb {
-  -webkit-appearance: none;
-}
 /** --Card-- */
 .card {
   display: flex;
@@ -568,9 +500,6 @@ input[type="checkbox"][id="play-btn"]:checked + label,
 .card.image section > img {
   aspect-ratio: 1 / 1;
 }
-.card.music section > img {
-  aspect-ratio: 5 / 1;
-}
 .card p {
   align-self: stretch;
   padding: 1rem 0.5rem;
@@ -585,10 +514,7 @@ input[type="checkbox"][id="play-btn"]:checked + label,
   flex-wrap: wrap;
   gap: 0.625rem;
 }
-.card .audio-player {
-  height: fit-content;
-  align-self: stretch;
-}
+
 /** --Scroll bar-- */
 ::-webkit-scrollbar {
   width: 1rem;

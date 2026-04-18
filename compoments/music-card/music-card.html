@@ -1,0 +1,75 @@
+<article class="card music">
+  <!-- content -->
+  <section>
+    <h2 class="f-title-s">Supper long as fuck title</h2>
+    <img src="/public/mavis site bg 4k.webp" alt="" width="172px" />
+    <div class="audio-player">
+      <div>
+        <input
+          type="checkbox"
+          name="play-btn"
+          onclick="togglePlay()"
+          class="display-none"
+          aria-label="play and pause audio button"
+          id="play-btn"
+        />
+        <label for="play-btn" class="play-button">
+          <img
+            src="public/play icon.svg"
+            alt="Play icon"
+            height="26.847"
+            width="31"
+            id="play-icon"
+          />
+          <img
+            src="public/play hover icon.svg"
+            alt="Play icon when hover"
+            height="26.847"
+            width="31"
+            id="play-hover-icon"
+          />
+          <img
+            src="public/play disabled icon.svg"
+            alt="Play icon when disabled"
+            height="26.847"
+            width="31"
+            id="play-disabled-icon"
+          />
+          <img
+            src="public/pause icon.svg"
+            alt="pause icon"
+            height="22"
+            width="23"
+            id="pause-icon"
+            class=""
+          />
+        </label>
+      </div>
+      <div>
+        <div class="audio-progress">
+          <div class="audio-progress-track">
+            <div class="audio-progress-fill"></div>
+          </div>
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="0"
+            class="audio-progress-input"
+          />
+        </div>
+      </div>
+      <audio>
+        <source src="/public/Hydrocivik - 7-bite.mp3" type="audio/mp3" />
+      </audio>
+    </div>
+
+    <ul class="ul-style-none">
+      <li class="tag f-tag">tag</li>
+      <li class="tag f-tag">Supper duper long as fuck tag</li>
+    </ul>
+  </section>
+  <a href="/" class="fs-h6 link-style-none card-button">
+    Listen full version
+  </a>
+</article>

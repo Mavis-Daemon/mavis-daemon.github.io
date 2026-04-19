@@ -2,7 +2,7 @@ let projects = [];
 let sortedProjects = [];
 let filteredProjects = [];
 let previousScreenSize = window.innerWidth;
-const SECTION = document.getElementById("section-project-list");
+const SECTION = document.getElementById("main-section-project-list");
 
 main();
 window.addEventListener("resize", updateMasonryGrid);
@@ -25,7 +25,7 @@ async function getData() {
 
 function handleFilterProjects(project) {
   const PAGE_FILTER_OPTION = document
-    .getElementById("section-project-list")
+    .getElementById("main-section-project-list")
     .classList[0].replace("filter-", "");
 
   if (PAGE_FILTER_OPTION === "all") return true;

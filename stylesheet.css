@@ -689,7 +689,7 @@ main {
 
 /** -----HOME PAGE----- */
 /** --Section hero-- */
-#section-hero {
+#main-section-hero {
   padding: 3rem 0;
   height: fit-content;
   display: flex;
@@ -699,23 +699,23 @@ main {
   align-items: center;
   gap: 2rem;
 }
-#section-hero > div:last-child {
+#main-section-hero > div:last-child {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 0.5rem;
 }
-#section-hero h1 {
+#main-section-hero h1 {
   text-wrap: balance;
 }
 /** --Section Card list-- */
-#section-project-list {
+#main-section-project-list {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: 1rem;
 }
-#section-project-list .col {
+#main-section-project-list .col {
   display: flex;
   flex-direction: column;
   align-items: center;

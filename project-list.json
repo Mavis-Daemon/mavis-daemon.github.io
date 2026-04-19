@@ -2,7 +2,7 @@
   {
     "title": "Puppets",
     "description": "",
-    "imagePath": "public/images/Puppet.JPg",
+    "imagePath": "public/images/Puppet.JPG",
     "imageAlt": "",
     "imageWidth": "400px",
     "imageOffset": "50% 50%",
@@ -28,7 +28,7 @@
   {
     "title": "Couples",
     "description": "",
-    "imagePath": "public/images/Couples.JPg",
+    "imagePath": "public/images/Couples.JPG",
     "imageAlt": "",
     "imageWidth": "400px",
     "imageOffset": "50% 50%",
@@ -41,7 +41,7 @@
   {
     "title": "The street",
     "description": "",
-    "imagePath": "public/images/landscape 2.JPg",
+    "imagePath": "public/images/landscape 2.JPG",
     "imageAlt": "",
     "imageWidth": "400px",
     "imageOffset": "50% 50%",
@@ -54,7 +54,7 @@
   {
     "title": "Flowers",
     "description": "",
-    "imagePath": "public/images/Flower.JPg",
+    "imagePath": "public/images/Flower.JPG",
     "imageAlt": "",
     "imageWidth": "400px",
     "imageOffset": "50% 50%",

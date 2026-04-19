@@ -514,7 +514,7 @@ input[type="checkbox"][id="device-button"]:checked
   padding: 1rem 0.5rem;
 }
 .card ul {
-  padding: 1rem 0.5rem;
+  padding: 0.5rem 0.5rem;
   align-self: stretch;
 
   display: flex;
@@ -716,6 +716,7 @@ main {
   align-items: flex-start;
   justify-content: space-between;
   gap: 1rem;
+  margin-bottom: 3rem;
 }
 #main-section-project-list .col {
   display: flex;

@@ -285,7 +285,7 @@ html {
 /** -----COMPONENT----- */
 /** --logo button-- */
 .logo-button {
-  min-height: calc(4rem - 4px);
+  min-height: 4rem;
   width: fit-content;
   padding: 0 1.25rem;
   display: flex;

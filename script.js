@@ -103,6 +103,7 @@ function createProjectCard(proj, colUl) {
   img.src = proj.imagePath;
   img.alt = proj.imageAlt;
   img.width = proj.imageWidth;
+  img.height = proj.imageHeight;
   img.loading = "lazy";
   img.style.objectPosition = proj.imageOffset;
   let p = document.createElement("p");
@@ -145,6 +146,7 @@ function createImageCard(proj, colUl) {
   img.src = proj.imagePath;
   img.alt = proj.imageAlt;
   img.width = proj.imageWidth;
+  img.height = proj.imageHeight;
   img.loading = "lazy";
   img.style.objectPosition = proj.imageOffset;
   let h2 = document.createElement("h2");

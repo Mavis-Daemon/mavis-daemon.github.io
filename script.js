@@ -1,3 +1,4 @@
+const DATA = "project-list.json";
 let projects = [];
 let sortedProjects = [];
 let filteredProjects = [];
@@ -18,7 +19,7 @@ async function main() {
 }
 
 async function getData() {
-  const res = await fetch(`project-list.json`);
+  const res = await fetch(DATA);
   const data = await res.json();
   return data;
 }
@@ -36,27 +37,27 @@ function handleFilterProjects(project) {
 }
 
 function initialMasonryGrid() {
-  if (previousScreenSize < 800) {
+  if (previousScreenSize < 550) {
     generateMasonryGrid(1);
-  } else if (previousScreenSize >= 800 && previousScreenSize < 1275) {
+  } else if (previousScreenSize >= 550 && previousScreenSize < 984) {
     generateMasonryGrid(2);
-  } else if (previousScreenSize >= 1275) {
+  } else if (previousScreenSize >= 984) {
     generateMasonryGrid(3);
   }
 }
 
 function updateMasonryGrid() {
-  if (window.innerWidth < 800 && previousScreenSize >= 800) {
+  if (window.innerWidth < 550 && previousScreenSize >= 550) {
     generateMasonryGrid(1);
     console.log("update Grid 1");
   } else if (
-    window.innerWidth >= 800 &&
-    window.innerWidth < 1275 &&
-    (previousScreenSize < 800 || previousScreenSize >= 1275)
+    window.innerWidth >= 550 &&
+    window.innerWidth < 984 &&
+    (previousScreenSize < 550 || previousScreenSize >= 984)
   ) {
     generateMasonryGrid(2);
     console.log("update Grid 2");
-  } else if (window.innerWidth >= 1275 && previousScreenSize < 1275) {
+  } else if (window.innerWidth >= 984 && previousScreenSize < 984) {
     generateMasonryGrid(3);
     console.log("update Grid 3");
   }
@@ -86,7 +87,7 @@ function handleCreateElement(colArraysObj, numberOfColumn) {
 
     SECTION.appendChild(colUl);
     currentCol.forEach((proj) => {
-      if (proj.type === "Project") {
+      if (proj.tags.map((tag) => tag.toLowerCase()).includes("project")) {
         createProjectCard(proj, colUl);
       } else {
         createImageCard(proj, colUl);
@@ -102,6 +103,7 @@ function createProjectCard(proj, colUl) {
   let h2 = document.createElement("h2");
   h2.classList.add("f-title-m");
   h2.innerText = proj.title;
+
   let img = document.createElement("img");
   img.src = proj.imagePath;
   img.alt = proj.imageAlt;

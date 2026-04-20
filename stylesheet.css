@@ -566,7 +566,6 @@ input[type="checkbox"][id="device-button"]:checked
   flex-wrap: wrap;
   gap: 0.625rem;
 }
-
 /** --Scroll bar-- */
 ::-webkit-scrollbar {
   width: 1rem;
@@ -838,9 +837,16 @@ main {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 1.25rem;
+  gap: 3rem 1.25rem;
+  padding: 1rem 0;
+  padding-bottom: 3rem;
 }
 #music-section-content .text-box {
   width: 100%;
   height: fit-content;
+}
+@media (width < 800px) {
+  #music-section-content {
+    flex-direction: column;
+  }
 }

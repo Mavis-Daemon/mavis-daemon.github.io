@@ -35,6 +35,11 @@
   --glow-secondary: 0 0 var(--glow-blur-2) 0 var(--color-secondary-1-25a);
   --glow-highlight: 0 0 var(--glow-blur-2) 0 var(--color-highlight-1-25a);
   --glow-other: 0 0 var(--glow-blur-1) 0 var(--color-other-25a);
+
+  --text-glow-main: 0 0 var(--glow-blur-1) var(--color-main-1-25a);
+  --text-glow-secondary: 0 0 var(--glow-blur-2) var(--color-secondary-1-25a);
+  --text-glow-highlight: 0 0 var(--glow-blur-2) var(--color-highlight-1-25a);
+  --text-glow-other: 0 0 var(--glow-blur-1) var(--color-other-25a);
 }
 /** --border-- */
 :root {
@@ -44,6 +49,7 @@
   --border-main-2-50a: var(--border-size) solid var(--color-main-2-50a);
   --border-main-4: var(--border-size) solid var(--color-main-4);
   --border-secondary-3: var(--border-size) solid var(--color-secondary-3);
+  --border-highlight-1: var(--border-size) solid var(--color-highlight-1);
 }
 /** --layout page grid-- */
 :root {
@@ -280,6 +286,19 @@ html {
 }
 .fc-other-10a {
   color: var(--color-other-10a);
+}
+/* glow */
+.fg-main {
+  text-shadow: var(--text-glow-main);
+}
+.fg-secondary {
+  text-shadow: var(--text-glow-secondary);
+}
+.fg-highlight {
+  text-shadow: var(--text-glow-highlight);
+}
+.fg-other {
+  text-shadow: var(--text-glow-other);
 }
 
 /** -----COMPONENT----- */
@@ -726,6 +745,58 @@ main {
 }
 
 /** -----ABOUT PAGE----- */
+/** ---Page content--- */
 #about-page-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-items: start;
+  align-items: start;
+  gap: 1.25rem;
+}
+#about-page-content .col {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 3rem 0;
+}
+#about-page-content .col-1 {
+  width: 100%;
+}
+#about-page-content .col-2 {
+  width: 100%;
+}
+@media (width < 800px) {
+  #about-page-content {
+    grid-template-columns: 1fr;
+  }
+}
+/** ---Profile card--- */
+#about-page-content #about-profile-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  /* background-color: red; */
+}
+#about-page-content #about-profile-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+
+  border: var(--border-highlight-1);
+  box-shadow: var(--glow-highlight);
+}
+
+#about-page-content #about-profile-card > div {
+  width: 100%;
+  padding: 0.5rem;
+
+  border: var(--border-main-2);
+  background-color: var(--color-main-2-5a);
+}
+#about-page-content #about-profile-card > p {
+  padding: 0.5rem;
+  border-left: var(--border-main-2);
+  border-right: var(--border-main-2);
 }

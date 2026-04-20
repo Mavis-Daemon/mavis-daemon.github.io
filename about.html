@@ -30,7 +30,7 @@
       rel="stylesheet"
     />
     <!-- CSS -->
-    <link rel="stylesheet" href="../../stylesheet.css" />
+    <link rel="stylesheet" href="stylesheet.css" />
     <!-- Meta data -->
     <title>Hyrax-x - About Page</title>
     <meta
@@ -99,18 +99,33 @@
 
     <main class="layout-page-grid">
       <div id="about-page-content">
-        <section id="about-profile-card">
-          <img src="public/images/Candle.jpg" alt="Me looking into distance" />
-          <h1>Tong Quoc Viet</h1>
-          <p>Hyrax-x</p>
-          <p>
-            Self taught front-end dev, graphic designer, artist, animator, video
-            editor, self taught musician. Final year on graphic design in PJATK
-            in Warszawa, Poland.
-          </p>
-          <p>Warszawa, Poland</p>
-          <p>11:30 (UTC +2:00)</p>
-        </section>
+        <div class="col col-1">
+          <section id="about-profile-card">
+            <img
+              src="public/images/me.jpg"
+              alt="Me looking into distance"
+              width="400"
+              height="400"
+            />
+            <div>
+              <h1 class="f-title-l fc-main-1 fg-main">Tong Quoc Viet</h1>
+              <p class="f-title-m fc-main-2-50a fg-main">Hyrax-x</p>
+            </div>
+            <p class="f-body">
+              Self taught front-end dev, graphic designer, artist, animator,
+              video editor, self taught musician. Final year on graphic design
+              in PJATK in Warsaw, Poland.
+            </p>
+            <div>
+              <p class="f-body fc-secondary-1 fg-secondary">Warsaw, Poland</p>
+              <p class="f-body fc-secondary-2 fg-secondary">
+                11:30 (UTC +2:00)
+              </p>
+            </div>
+          </section>
+        </div>
+        <div class="col col-2">
+        </div>
       </div>
     </main>
   </body>

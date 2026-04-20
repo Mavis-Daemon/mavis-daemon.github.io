@@ -26,10 +26,13 @@ async function getData() {
 function handleFilterProjects(project) {
   const PAGE_FILTER_OPTION = document
     .getElementById("main-section-project-list")
-    .classList[0].replace("filter-", "");
-
+    .classList[0].replace("filter-", "")
+    .toLowerCase();
   if (PAGE_FILTER_OPTION === "all") return true;
-  return project.type.toLowerCase() === PAGE_FILTER_OPTION;
+
+  return project.tags
+    .map((tag) => tag.toLowerCase())
+    .includes(PAGE_FILTER_OPTION);
 }
 
 function initialMasonryGrid() {
@@ -112,8 +115,7 @@ function createProjectCard(proj, colUl) {
   let tagUl = document.createElement("ul");
   tagUl.classList.add("ul-style-none");
   let tagLi = document.createElement("li");
-  tagLi.classList.add("tag", "f-tag");
-  tagLi.innerHTML = proj.type;
+
   let a = document.createElement("a");
   a.classList.add("fs-h6", "link-style-none", "card-button");
   a.href = proj.path;
@@ -127,7 +129,6 @@ function createProjectCard(proj, colUl) {
     section.appendChild(p);
   }
   section.appendChild(tagUl);
-  tagUl.appendChild(tagLi);
 
   proj.tags.forEach((tag) => {
     let tagLi = document.createElement("li");
@@ -155,8 +156,7 @@ function createImageCard(proj, colUl) {
   let tagUl = document.createElement("ul");
   tagUl.classList.add("ul-style-none");
   let tagLi = document.createElement("li");
-  tagLi.classList.add("tag", "f-tag");
-  tagLi.innerHTML = proj.type;
+
   let a = document.createElement("a");
   a.classList.add("fs-h6", "link-style-none", "card-button");
   a.href = proj.path;
@@ -166,7 +166,7 @@ function createImageCard(proj, colUl) {
   projLi.appendChild(article);
   article.append(section, a);
   section.append(img, h2, tagUl);
-  tagUl.appendChild(tagLi);
+
   proj.tags.forEach((tag) => {
     let tagLi = document.createElement("li");
     tagLi.classList.add("tag", "f-tag");

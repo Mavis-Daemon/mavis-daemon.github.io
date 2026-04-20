@@ -9,7 +9,7 @@
     "imageOffset": "50% 50%",
     "year": 2020,
     "type": "Image",
-    "tags": [],
+    "tags": ["Image"],
     "audio": "",
     "path": ""
   },
@@ -23,7 +23,7 @@
     "imageOffset": "50% 50%",
     "year": 2023,
     "type": "Image",
-    "tags": [],
+    "tags": ["Image"],
     "audio": "",
     "path": ""
   },
@@ -37,7 +37,7 @@
     "imageOffset": "50% 50%",
     "year": 2020,
     "type": "Image",
-    "tags": ["Daily life"],
+    "tags": ["Image", "Daily life"],
     "audio": "",
     "path": ""
   },
@@ -51,7 +51,7 @@
     "imageOffset": "50% 50%",
     "year": 2023,
     "type": "Image",
-    "tags": ["Landscapes"],
+    "tags": ["Image", "Landscapes"],
     "audio": "",
     "path": ""
   },
@@ -65,7 +65,7 @@
     "imageOffset": "50% 50%",
     "year": 2020,
     "type": "Image",
-    "tags": [],
+    "tags": ["Image"],
     "audio": "",
     "path": ""
   },
@@ -79,7 +79,7 @@
     "imageOffset": "50% 50%",
     "year": 2024,
     "type": "Project",
-    "tags": ["UI/UX", "Figma Mockup"],
+    "tags": ["Project", "UI/UX", "Figma Mockup"],
     "audio": "",
     "path": ""
   },
@@ -93,7 +93,7 @@
     "imageOffset": "50% 50%",
     "year": 2025,
     "type": "Project",
-    "tags": ["UI/UX", "Wordpress Elementor"],
+    "tags": ["Project", "UI/UX", "Wordpress Elementor"],
     "audio": "",
     "path": ""
   },
@@ -107,7 +107,7 @@
     "imageOffset": "50% 50%",
     "year": 2025,
     "type": "Project",
-    "tags": ["UI/UX", "Figma Mockup"],
+    "tags": ["Project", "UI/UX", "Figma Mockup"],
     "audio": "",
     "path": ""
   },
@@ -121,7 +121,7 @@
     "imageOffset": "50% 50%",
     "year": 2025,
     "type": "Project",
-    "tags": ["animation", "storyboard"],
+    "tags": ["Project", "animation", "storyboard"],
     "audio": "",
     "path": ""
   },
@@ -135,7 +135,7 @@
     "imageOffset": "50% 50%",
     "year": 2025,
     "type": "Image",
-    "tags": ["Arts"],
+    "tags": ["Image", "Arts"],
     "audio": "",
     "path": ""
   }

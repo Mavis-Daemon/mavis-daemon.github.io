@@ -734,7 +734,7 @@ main {
 
 /** -----HOME PAGE----- */
 /** --Section hero-- */
-#main-section-hero {
+.section-hero {
   padding: 3rem 0;
   height: fit-content;
   display: flex;
@@ -744,13 +744,13 @@ main {
   align-items: center;
   gap: 2rem;
 }
-#main-section-hero > div:last-child {
+.section-hero > div:last-child {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 0.5rem;
 }
-#main-section-hero h1 {
+.section-hero h1 {
   text-wrap: balance;
 }
 /** --Section Card list-- */

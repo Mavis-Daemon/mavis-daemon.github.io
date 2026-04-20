@@ -22,7 +22,6 @@
     "imageHeight": "400px",
     "imageOffset": "50% 50%",
     "year": 2023,
-    "type": "Image",
     "tags": ["Image"],
     "audio": "",
     "path": ""
@@ -36,7 +35,6 @@
     "imageHeight": "400px",
     "imageOffset": "50% 50%",
     "year": 2020,
-    "type": "Image",
     "tags": ["Image", "Daily life"],
     "audio": "",
     "path": ""
@@ -50,7 +48,6 @@
     "imageHeight": "400px",
     "imageOffset": "50% 50%",
     "year": 2023,
-    "type": "Image",
     "tags": ["Image", "Landscapes"],
     "audio": "",
     "path": ""
@@ -64,7 +61,6 @@
     "imageHeight": "400px",
     "imageOffset": "50% 50%",
     "year": 2020,
-    "type": "Image",
     "tags": ["Image"],
     "audio": "",
     "path": ""
@@ -78,7 +74,6 @@
     "imageHeight": "400px",
     "imageOffset": "50% 50%",
     "year": 2024,
-    "type": "Project",
     "tags": ["Project", "UI/UX", "Figma Mockup"],
     "audio": "",
     "path": ""
@@ -92,7 +87,6 @@
     "imageHeight": "400px",
     "imageOffset": "50% 50%",
     "year": 2025,
-    "type": "Project",
     "tags": ["Project", "UI/UX", "Wordpress Elementor"],
     "audio": "",
     "path": ""
@@ -106,7 +100,6 @@
     "imageHeight": "400px",
     "imageOffset": "50% 50%",
     "year": 2025,
-    "type": "Project",
     "tags": ["Project", "UI/UX", "Figma Mockup"],
     "audio": "",
     "path": ""
@@ -120,7 +113,6 @@
     "imageHeight": "400px",
     "imageOffset": "50% 50%",
     "year": 2025,
-    "type": "Project",
     "tags": ["Project", "animation", "storyboard"],
     "audio": "",
     "path": ""
@@ -134,7 +126,6 @@
     "imageHeight": "400px",
     "imageOffset": "50% 50%",
     "year": 2025,
-    "type": "Image",
     "tags": ["Image", "Arts"],
     "audio": "",
     "path": ""

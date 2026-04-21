@@ -469,6 +469,8 @@ input[type="checkbox"][id="device-button"]:checked
   position: relative;
   padding: 1.5rem;
   align-self: stretch;
+  width: 100%;
+  height: fit-content;
 
   display: flex;
   flex-direction: column;
@@ -487,6 +489,75 @@ input[type="checkbox"][id="device-button"]:checked
   top: -0.8125rem;
 
   background: var(--color-main-4);
+}
+/** --title Box-- */
+.title-box-parent {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.title-box-parent img:first-child {
+  border-bottom: none;
+}
+.title-box {
+  border: var(--border-highlight-1);
+}
+.title-box > * {
+  padding: 1rem 0.5rem;
+  box-shadow: var(--glow-highlight);
+}
+.title-box > *:not(*:last-child) {
+  border-bottom: var(--border-highlight-1);
+}
+.title-box h1 {
+  color: var(--color-main-4);
+  background-color: var(--color-highlight-1-70a);
+}
+.title-box ul {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+
+  background-color: var(--color-main-2-5a);
+}
+/** --image Box-- */
+img.image-box {
+  object-fit: cover;
+}
+.image-box {
+  width: 100%;
+  border: var(--border-main-2);
+  box-shadow: var(--glow-main);
+}
+.image-box .image-box-images {
+  height: 30rem;
+  display: flex;
+  gap: 0 1rem;
+  overflow: auto;
+}
+.image-box .image-box-images img {
+  width: fit-content;
+  height: 100%;
+}
+.image-box.important {
+  border: var(--border-highlight-1);
+  box-shadow: var(--glow-highlight);
+}
+.image-box.aspect-title {
+  height: fit-content;
+  aspect-ratio: 2 / 1;
+  transition: 300ms;
+}
+@media (width >= 550px) {
+  .image-box.aspect-title {
+    aspect-ratio: 3 / 1;
+  }
+}
+@media (width >= 984px) {
+  .image-box.aspect-title {
+    aspect-ratio: 4 / 1;
+  }
 }
 /** --Card button-- */
 .card-button {
@@ -717,7 +788,17 @@ main {
     overflow: auto;
   }
 }
-
+/** --project page layout-- */
+.project-page-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 0;
+  gap: 3rem 0;
+}
+.project-page-content > * {
+  width: 100%;
+}
 /** --Page grid-- */
 .layout-page-grid {
   display: grid;
@@ -855,10 +936,7 @@ main {
   padding: 1rem 0;
   padding-bottom: 3rem;
 }
-#music-section-content .text-box {
-  width: 100%;
-  height: fit-content;
-}
+
 @media (width < 800px) {
   #music-section-content {
     flex-direction: column;

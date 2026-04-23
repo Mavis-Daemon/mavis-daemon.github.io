@@ -12,19 +12,17 @@ async function main() {
   projects = await getData();
   sortedProjects = projects.sort((a, b) => b.year - a.year);
   filteredProjects = sortedProjects.filter((project) =>
-    handleFilterProjects(project),
+    filterProjects(project),
   );
 
-  initialMasonryGrid();
+  initializeMasonryGrid();
 }
-
 async function getData() {
   const res = await fetch(DATA);
   const data = await res.json();
   return data;
 }
-
-function handleFilterProjects(project) {
+function filterProjects(project) {
   const PAGE_FILTER_OPTION = document
     .getElementById("main-section-project-list")
     .classList[0].replace("filter-", "")
@@ -36,7 +34,7 @@ function handleFilterProjects(project) {
     .includes(PAGE_FILTER_OPTION);
 }
 
-function initialMasonryGrid() {
+function initializeMasonryGrid() {
   if (previousScreenSize < 550) {
     generateMasonryGrid(1);
   } else if (previousScreenSize >= 550 && previousScreenSize < 984) {
@@ -45,7 +43,6 @@ function initialMasonryGrid() {
     generateMasonryGrid(3);
   }
 }
-
 function updateMasonryGrid() {
   if (window.innerWidth < 550 && previousScreenSize >= 550) {
     generateMasonryGrid(1);
@@ -77,9 +74,9 @@ function generateMasonryGrid(numberOfColumn) {
     colArraysObj[`col${COL}`].push(filteredProjects[i]);
   }
 
-  handleCreateElement(colArraysObj, numberOfColumn);
+  handleRenderElement(colArraysObj, numberOfColumn);
 }
-function handleCreateElement(colArraysObj, numberOfColumn) {
+function handleRenderElement(colArraysObj, numberOfColumn) {
   for (let i = 0; i < numberOfColumn; i++) {
     let currentCol = colArraysObj[`col${i}`];
     let colUl = document.createElement("ul");
@@ -88,14 +85,14 @@ function handleCreateElement(colArraysObj, numberOfColumn) {
     SECTION.appendChild(colUl);
     currentCol.forEach((proj) => {
       if (proj.tags.map((tag) => tag.toLowerCase()).includes("project")) {
-        createProjectCard(proj, colUl);
+        renderProjectCard(proj, colUl);
       } else {
-        createImageCard(proj, colUl);
+        renderImageCard(proj, colUl);
       }
     });
   }
 }
-function createProjectCard(proj, colUl) {
+function renderProjectCard(proj, colUl) {
   let projLi = document.createElement("li");
   let article = document.createElement("article");
   article.classList.add("card", "project");
@@ -140,7 +137,7 @@ function createProjectCard(proj, colUl) {
     tagUl.appendChild(tagLi);
   });
 }
-function createImageCard(proj, colUl) {
+function renderImageCard(proj, colUl) {
   let projLi = document.createElement("li");
   let article = document.createElement("article");
   article.classList.add("card", "image");

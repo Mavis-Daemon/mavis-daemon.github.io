@@ -136,6 +136,8 @@ html {
   border-style: none;
   background-color: transparent;
   box-shadow: none;
+  font-family: inherit;
+  font-size: inherit;
 }
 .ul-style-none {
   list-style-type: none;

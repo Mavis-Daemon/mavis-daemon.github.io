@@ -1,14 +1,20 @@
+console.log("script.js loaded");
+
 const DATA = "project-list.json";
 let projects = [];
 let sortedProjects = [];
 let filteredProjects = [];
 let previousScreenSize = window.innerWidth;
 const SECTION = document.getElementById("main-section-project-list");
+const multipleImageBoxes = document.querySelectorAll(".image-box.multiple");
 
 if (SECTION !== null) {
   main();
   window.addEventListener("resize", updateMasonryGrid);
 }
+multipleImageBoxes.forEach((multiImageBox) => {
+  initializeMultiImageBox(multiImageBox);
+});
 
 async function main() {
   projects = await getData();
@@ -175,4 +181,74 @@ function renderImageCard(proj, colUl) {
 
     tagUl.appendChild(tagLi);
   });
+}
+
+function initializeMultiImageBox(multiImageBox) {
+  const tabs = multiImageBox.querySelectorAll(".button-image-tab");
+  const images = multiImageBox.querySelectorAll("img");
+  const buttonScrollLeft = multiImageBox.querySelector(".scroll-left");
+  const buttonScrollRight = multiImageBox.querySelector(".scroll-right");
+
+  images.forEach((img, i) => {
+    img.setAttribute("data-index", i);
+  });
+  updateScrollButton(tabs, 0, buttonScrollLeft, buttonScrollRight);
+
+  buttonScrollLeft.onclick = () =>
+    handleScroll(-1, images, tabs, buttonScrollLeft, buttonScrollRight);
+  buttonScrollRight.onclick = () =>
+    handleScroll(1, images, tabs, buttonScrollLeft, buttonScrollRight);
+  tabs.forEach((tab, i) => {
+    tab.onclick = () =>
+      scrollToIndex(images, i, tabs, buttonScrollLeft, buttonScrollRight);
+  });
+}
+function handleScroll(
+  direction,
+  images,
+  tabs,
+  buttonScrollLeft,
+  buttonScrollRight,
+) {
+  const currentTab = Array.from(tabs).findIndex((tab) =>
+    tab.classList.contains("active"),
+  );
+  scrollToIndex(
+    images,
+    currentTab + direction,
+    tabs,
+    buttonScrollLeft,
+    buttonScrollRight,
+  );
+}
+function scrollToIndex(
+  images,
+  index,
+  tabs,
+  buttonScrollLeft,
+  buttonScrollRight,
+) {
+  if (index >= 0 && index < images.length) {
+    images[index].scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "center",
+    });
+    updateTab(tabs, index);
+    updateScrollButton(tabs, index, buttonScrollLeft, buttonScrollRight);
+  }
+}
+function updateTab(tabs, index) {
+  tabs.forEach((tab, i) => {
+    const isActive = i === parseInt(index);
+
+    tab.classList.toggle("active", i === parseInt(index));
+    tab.disabled = isActive;
+  });
+}
+function updateScrollButton(tabs, index, buttonScrollLeft, buttonScrollRight) {
+  if (buttonScrollLeft && buttonScrollRight) {
+    buttonScrollLeft.disabled = index === 0;
+    buttonScrollRight.disabled = index === tabs.length - 1;
+  }
 }

@@ -523,6 +523,46 @@ input[type="checkbox"][id="device-button"]:checked
 
   background-color: var(--color-main-2-5a);
 }
+/** --button-image-scroll-- */
+.button-image-scroll {
+  height: calc(2rem + var(--border-size));
+  aspect-ratio: 1 / 1;
+
+  background-color: var(--color-main-2-5a);
+  text-align: center;
+  color: var(--color-main-2);
+  transition: 300ms;
+}
+.button-image-scroll:hover:not(:disabled) {
+  background-color: var(--color-main-2-50a);
+  box-shadow: var(--glow-main);
+  color: var(--color-secondary-1);
+}
+.button-image-scroll:active:not(:disabled) {
+  background-color: var(--color-highlight-1);
+  box-shadow: var(--glow-highlight);
+  color: var(--color-main-4);
+}
+.button-image-scroll:disabled {
+  background-color: var(--color-other-10a);
+  color: var(--color-other-40a);
+}
+/** --button-image-tab-- */
+.button-image-tab {
+  width: 100%;
+  height: 1rem;
+  background-color: var(--color-other-40a);
+  transition: 300ms;
+}
+.button-image-tab:hover {
+  background-color: var(--color-other);
+  box-shadow: var(--glow-other);
+}
+.button-image-tab:active,
+.button-image-tab.active {
+  background-color: var(--color-secondary-1);
+  box-shadow: var(--glow-secondary);
+}
 /** --image Box-- */
 img.image-box {
   object-fit: cover;
@@ -533,14 +573,46 @@ img.image-box {
   box-shadow: var(--glow-main);
 }
 .image-box .image-box-images {
+  width: 100%;
   height: 30rem;
   display: flex;
   gap: 0 1rem;
-  overflow: auto;
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.image-box .image-box-controler {
+  align-self: stretch;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.image-box .image-box-controler div {
+  align-self: stretch;
+  flex: 1 0 0;
+  display: flex;
+  padding: 0.5rem 1.25rem;
+  align-items: center;
+  gap: 0.25rem;
+}
+.image-box .image-box-controler > * {
+  border-bottom: var(--border-main-2);
+}
+.image-box .image-box-controler > *:not(*:last-child) {
+  border-right: var(--border-main-2);
 }
 .image-box .image-box-images img {
   width: fit-content;
   height: 100%;
+  scroll-snap-align: center;
+}
+.image-box .image-box-images img:first-child {
+  scroll-snap-align: start;
+}
+.image-box .image-box-images img:last-child {
+  scroll-snap-align: end;
 }
 .image-box.important {
   border: var(--border-highlight-1);

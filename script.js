@@ -5,8 +5,10 @@ let filteredProjects = [];
 let previousScreenSize = window.innerWidth;
 const SECTION = document.getElementById("main-section-project-list");
 
-main();
-window.addEventListener("resize", updateMasonryGrid);
+if (SECTION !== null) {
+  main();
+  window.addEventListener("resize", updateMasonryGrid);
+}
 
 async function main() {
   projects = await getData();

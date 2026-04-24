@@ -80,10 +80,10 @@
   {
     "title": "Hydrocivik Website",
     "description": "This is a landing page about my own music producer brand.",
-    "imagePath": "public/images/project-hydrocivik-site/hydrocivik-site-mockup-1.png",
-    "imageAlt": "",
+    "imagePath": "public/images/project-hydrocivik-site/thumbnail/mockup-1.webp",
+    "imageAlt": "Computer on table with hero section of the website open",
     "imageWidth": 550,
-    "imageHeight": 550,
+    "imageHeight": 413,
     "imageOffset": "50% 50%",
     "year": 2025,
     "tags": ["Project", "UI/UX", "Wordpress Elementor"],

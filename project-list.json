@@ -104,6 +104,19 @@
     "path": "/project-linkup.html"
   },
   {
+    "title": "Beauty in Design",
+    "description": "This landing page highlights the most important design principle and explains why it matters.",
+    "imagePath": "public/images/project-beauty-in-design/thumbnail.webp",
+    "imageAlt": "Hero section of the landing page",
+    "imageWidth": 550,
+    "imageHeight": 345,
+    "imageOffset": "50% 50%",
+    "year": 2024,
+    "tags": ["Project", "UI/UX", "Figma Mockup"],
+    "audio": "",
+    "path": "/project-beauty-in-design.html"
+  },
+  {
     "title": "Khe Uoc Storyboard",
     "description": "",
     "imagePath": "public/images/project-kheuoc-storyboard/khe-uoc-storyboard.jpg",

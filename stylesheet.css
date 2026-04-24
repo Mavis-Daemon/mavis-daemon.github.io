@@ -563,6 +563,27 @@ input[type="checkbox"][id="device-button"]:checked
   background-color: var(--color-secondary-1);
   box-shadow: var(--glow-secondary);
 }
+/** --Box-- */
+.box {
+  width: 100%;
+  border: var(--border-main-2);
+}
+.box > * {
+  width: 100%;
+  border: none;
+}
+.box > *:not(*:last-child) {
+  border-bottom: var(--border-main-2);
+}
+.box h2,
+.box p {
+  align-self: stretch;
+  padding: 0.5rem;
+}
+.box h2 {
+  background-color: var(--color-main-2-5a);
+  box-shadow: var(--glow-main);
+}
 /** --image Box-- */
 img.image-box {
   object-fit: cover;

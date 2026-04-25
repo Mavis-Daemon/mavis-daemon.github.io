@@ -136,18 +136,18 @@
   },
   {
     "title": "Khe Uoc Storyboard",
-    "description": "",
-    "imagePath": "public/images/project-kheuoc-storyboard/khe-uoc-storyboard.jpg",
-    "imageAlt": "",
+    "description": "Storyboard based on the lyrics of the song Khe Uoc by The Flob",
+    "imagePath": "public/images/project-kheuoc-storyboard/thumbnail.webp",
+    "imageAlt": "title of the song wrapped with rose on top of the green glass field",
     "imageWidth": 550,
-    "imageHeight": 550,
+    "imageHeight": 309,
     "imageOffset": "50% 50%",
     "year": 2025,
-    "tags": ["Project", "animation", "storyboard"],
+    "tags": ["Project", "Animation", "Storyboard", "Art"],
     "audio": "",
-    "path": ""
     "buttonText": "View Storyboard",
     "target": "_self",
+    "path": "/project-khe-uoc-storyboard.html"
   },
   {
     "title": "Chibi Play Guitar",

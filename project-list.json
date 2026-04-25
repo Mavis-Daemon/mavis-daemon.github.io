@@ -193,5 +193,20 @@
     "buttonText": "",
     "target": "_blank",
     "path": "https://hyrax-x.github.io/cyberrama/"
+  },
+  {
+    "title": "Voxel Stage",
+    "description": "A cyberpunk 2077 inspired stage built on Magical Voxel",
+    "imagePath": "public/projects/project-voxel-stage/thumbnail.webp",
+    "imageAlt": "A stage with multiple guitar in 3D voxel",
+    "imageWidth": 550,
+    "imageHeight": 309,
+    "imageOffset": "50% 50%",
+    "year": 2025,
+    "tags": ["Project", "Design", "3D", "Voxel"],
+    "audio": "",
+    "buttonText": "",
+    "target": "_blank",
+    "path": "https://skfb.ly/pxP8Z"
   }
 ]

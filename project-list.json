@@ -17,7 +17,7 @@
   {
     "title": "Candles",
     "description": "",
-    "imagePath": "public/images/candles-thumbnail.webp",
+    "imagePath": "public/images/thumbnail/candles-thumbnail.webp",
     "imageAlt": "Image of a lot of candles lining up",
     "imageWidth": 550,
     "imageHeight": 267,

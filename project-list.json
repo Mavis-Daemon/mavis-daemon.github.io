@@ -182,8 +182,8 @@
   {
     "title": "Chibi Play Guitar",
     "description": "",
-    "imagePath": "public/images/Chibi-play-guitar.jpg",
-    "imageAlt": "",
+    "imagePath": "public/images/thumbnail/chibi-play-guitar-thumbnail.webp",
+    "imageAlt": "Chibi play guitar",
     "imageWidth": 550,
     "imageHeight": 550,
     "imageOffset": "50% 50%",
@@ -192,7 +192,7 @@
     "audio": "",
     "buttonText": "",
     "target": "_self",
-    "path": ""
+    "path": "/image-chibi-play-guitar.html"
   },
   {
     "title": "CyberRama",

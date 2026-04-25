@@ -17,17 +17,17 @@
   {
     "title": "Candles",
     "description": "",
-    "imagePath": "public/images/Candle.jpg",
-    "imageAlt": "",
+    "imagePath": "public/images/candles-thumbnail.webp",
+    "imageAlt": "Image of a lot of candles lining up",
     "imageWidth": 550,
-    "imageHeight": 550,
+    "imageHeight": 267,
     "imageOffset": "50% 50%",
     "year": 2023,
     "tags": ["Image"],
     "audio": "",
     "buttonText": "",
     "target": "_self",
-    "path": ""
+    "path": "/image-candles.html"
   },
   {
     "title": "Couples",

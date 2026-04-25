@@ -32,11 +32,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="stylesheet.css" />
     <!-- Meta data -->
-    <title>Hyrax-x - Videos and Animations page</title>
-    <meta
-      name="description"
-      content="Here is all my Videos and Animations works"
-    />
+    <title>Hyrax-x - Arts page</title>
+    <meta name="description" content="Here is all my Art works" />
   </head>
   <body>
     <header>
@@ -50,12 +47,7 @@
           <div class="filter-wrap">
             <div class="filter-list">
               <a href="/" class="f-button nav-button link-style-none"> All </a>
-              <a
-                href="/tab-arts.html"
-                class="f-button nav-button link-style-none"
-              >
-                Arts
-              </a>
+              <div class="f-button nav-button link-style-none active">Arts</div>
               <a href="/" class="f-button nav-button link-style-none disabled">
                 Images
               </a>
@@ -74,9 +66,12 @@
               >
                 Musics
               </a>
-              <div class="f-button nav-button link-style-none active">
+              <a
+                href="/tab-videos-and-animations.html"
+                class="f-button nav-button link-style-none"
+              >
                 Videos & Animations
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -93,12 +88,10 @@
     <main class="layout-page-grid">
       <div>
         <section class="section-hero">
-          <h1 class="f-hero">Videos & Animations</h1>
+          <h1 class="f-hero">All Arts</h1>
 
           <div>
-            <p class="f-body">
-              You can find all of my Video and Animation related works here.
-            </p>
+            <p class="f-body">You can find all of my art related works here.</p>
 
             <p class="f-body">
               Enjoy!
@@ -112,10 +105,7 @@
           </div>
         </section>
 
-        <section
-          id="main-section-project-list"
-          class="filter-video filter-animation"
-        ></section>
+        <section id="main-section-project-list" class="filter-art"></section>
       </div>
     </main>
 

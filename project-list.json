@@ -43,21 +43,7 @@
     "buttonText": "",
     "target": "_self",
     "path": ""
-  },
-  {
-    "title": "The street",
-    "description": "",
-    "imagePath": "public/images/landscape 2.JPG",
-    "imageAlt": "",
-    "imageWidth": 550,
-    "imageHeight": 550,
-    "imageOffset": "50% 50%",
-    "year": 2023,
-    "tags": ["Image", "Landscapes"],
-    "audio": "",
-    "buttonText": "",
-    "target": "_self",
-    "path": ""
+    "path": "/image-couple.html"
   },
   {
     "title": "Flowers",

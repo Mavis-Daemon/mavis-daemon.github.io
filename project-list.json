@@ -150,6 +150,21 @@
     "path": "/project-khe-uoc-storyboard.html"
   },
   {
+    "title": "Run Nora Run",
+    "description": "An interactive movies with multiple choices",
+    "imagePath": "public/projects/project-run-nora-run/thumbnail.webp",
+    "imageAlt": "Menu of the game",
+    "imageWidth": 550,
+    "imageHeight": 309,
+    "imageOffset": "50% 50%",
+    "year": 2025,
+    "tags": ["Project", "Video", "Game"],
+    "audio": "",
+    "buttonText": "View on Stornaway",
+    "target": "_blank",
+    "path": "https://player.stornaway.io/watch/d99d4b09"
+  },
+  {
     "title": "Yokai Meetup",
     "description": "This illustration shows a meetup between the Yokai and your own Yokai within ",
     "imagePath": "public/projects/project-yokai-meetup/thumbnail.webp",

@@ -7,6 +7,7 @@ let filteredProjects = [];
 let previousScreenSize = window.innerWidth;
 const SECTION = document.getElementById("main-section-project-list");
 const multipleImageBoxes = document.querySelectorAll(".image-box.multiple");
+let utcOffset = 2;
 
 if (SECTION !== null) {
   main();
@@ -15,6 +16,10 @@ if (SECTION !== null) {
 multipleImageBoxes.forEach((multiImageBox) => {
   initializeMultiImageBox(multiImageBox);
 });
+if (document.getElementById("current-time")) {
+  updateTime();
+  setInterval(updateTime, 1000);
+}
 
 async function main() {
   projects = await getData();
@@ -252,5 +257,20 @@ function updateScrollButton(tabs, index, buttonScrollLeft, buttonScrollRight) {
   if (buttonScrollLeft && buttonScrollRight) {
     buttonScrollLeft.disabled = index === 0;
     buttonScrollRight.disabled = index === tabs.length - 1;
+  }
+}
+
+function updateTime() {
+  const now = new Date();
+  const utcTime = now.getTime() + now.getTimezoneOffset() * 60000;
+  const localTime = new Date(utcTime + utcOffset * 3600000);
+  const timeString = localTime.toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+  const element = document.getElementById("current-time");
+
+  if (element) {
+    element.textContent = `${timeString} (UTC +${utcOffset}:00)`;
   }
 }

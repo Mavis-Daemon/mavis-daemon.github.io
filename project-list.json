@@ -135,6 +135,21 @@
     "path": "/project-khe-uoc-storyboard.html"
   },
   {
+    "title": "Soup Animation",
+    "description": "An animation representing different culture though the process of make traditional soup",
+    "imagePath": "public/images/CCCD-animation-thumbnail.webp",
+    "imageAlt": "Image of vietnamese soup",
+    "imageWidth": 550,
+    "imageHeight": 3555,
+    "imageOffset": "50% 50%",
+    "year": 2025,
+    "tags": ["Project", "Animation"],
+    "audio": "",
+    "buttonText": "View on Youtube",
+    "target": "_blank",
+    "path": "https://youtu.be/umxPajkTJxY?si=k1kkfDngW40-QH2g"
+  },
+  {
     "title": "Run Nora Run",
     "description": "An interactive movies with multiple choices",
     "imagePath": "public/projects/project-run-nora-run/thumbnail.webp",

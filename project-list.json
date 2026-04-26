@@ -220,8 +220,23 @@
     "year": 2024,
     "tags": ["Design"],
     "audio": "",
-    "buttonText": "View Full",
+    "buttonText": "",
     "target": "",
     "path": "/image-album-packaging.html"
+  },
+  {
+    "title": "Coffee Box Packaging",
+    "description": "",
+    "imagePath": "public/images/thumbnail/Coffee-packaging-thumbnail.webp",
+    "imageAlt": "packaging for coffee box design",
+    "imageWidth": 550,
+    "imageHeight": 625,
+    "imageOffset": "50% 50%",
+    "year": 2022,
+    "tags": ["Design"],
+    "audio": "",
+    "buttonText": "",
+    "target": "",
+    "path": "/image-coffee-packaging.html"
   }
 ]
